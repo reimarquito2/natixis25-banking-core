@@ -2,10 +2,25 @@ name: Hello Natixis
 on:
   woekflow_dispatch:
 
-jobs:
-  hello-natixis:
-  
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say Hello
-        run: echo "Hello Natixis!"
+  jobs:
+    build-and-test:
+      name: Build and Test
+      runs-on: ubuntu-latest
+      steps:
+        - name: Obter código
+          uses: actions/checkout@v3
+        - name: Instalar dependências
+          run: echo "Instalando dependências"
+        - name: Rodar testes
+          run: echo "Testes a rodar"
+
+    build:
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+        - name: Obter código
+          uses: actions/checkout@v3
+        - name: Instalar dependências
+          run: echo "Instalando dependências"
+        - name: Rodar testes
+          run: echo "Testes a rodar"
