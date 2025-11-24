@@ -1,0 +1,11 @@
+name: Hello Natixis
+on:
+  woekflow_dispatch:
+
+jobs:
+  hello-natixis:
+  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello Natixis!"
